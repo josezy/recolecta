@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -14,7 +16,10 @@
         <meta name="theme-color" content="#fdfcfd">
 
         {% block metatags %}{% endblock %}
+
         {% block preloads %}{% endblock %}
+        <link rel="stylesheet" href="{% static 'base.css' %}" type="text/css" crossorigin>
+
         {% block head %}{% endblock %}
     </head>
 
