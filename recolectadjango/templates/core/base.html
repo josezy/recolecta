@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="language" content="en">
+        <meta name=”robot” content=”noindex, nofollow”>
+
+        <title>{% block title %}♻️ | Recolecta{% endblock %}</title>
+      
+        <meta name="theme-color" content="#ddd">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="msapplication-TileColor" content="#00a300">
+        <meta name="theme-color" content="#fdfcfd">
+
+        {% block metatags %}{% endblock %}
+        {% block preloads %}{% endblock %}
+        {% block head %}{% endblock %}
+    </head>
+
+    <body class="{{body_classes}}">
+        <div class="body-container">
+
+            {% block outer %}
+                {% block navbar %}
+                    {% include 'core/navigation.html' %}
+                {% endblock %}
+
+                <main>
+                    {% block inner %}
+                    {% endblock inner %}
+                </main>
+
+                {% block footer %}
+                    {% include 'core/footer.html' %}
+                {% endblock %}
+            {% endblock %}
+
+        </div>
+
+        {% block tail %}
+        {% endblock %}
+    </body>
+</html>
