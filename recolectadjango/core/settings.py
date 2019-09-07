@@ -30,6 +30,8 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+STATICFILES_DIR = os.path.join(BASE_DIR, 'static')
+
 
 # Application definition
 
@@ -71,6 +73,8 @@ TEMPLATES = [
         },
     },
 ]
+
+STATICFILES_DIRS = [STATICFILES_DIR]
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
