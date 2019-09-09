@@ -44,6 +44,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'core',
+    'hoarding',
+
+    'django_extensions',
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -55,8 +59,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-ROOT_URLCONF = 'core.urls'
 
 TEMPLATES = [
     {
@@ -76,8 +78,10 @@ TEMPLATES = [
 
 STATICFILES_DIRS = [STATICFILES_DIR]
 
-WSGI_APPLICATION = 'core.wsgi.application'
 
+WSGI_APPLICATION = 'core.wsgi.application'
+AUTH_USER_MODEL = 'core.User'
+ROOT_URLCONF = 'core.urls'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
@@ -128,4 +132,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(DATA_DIR, 'static')
-

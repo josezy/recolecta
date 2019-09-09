@@ -7,6 +7,11 @@ verify_ssl = true
 
 [packages]
 django = "*"
+pillow = "*"
+django-extensions = "*"
+ipython = "*"
+ipdb = "*"
+django-bootstrap4 = "*"
 
 [requires]
 python_version = "3.7"
