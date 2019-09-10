@@ -3,12 +3,16 @@
 {% load bootstrap4 %}
 
 {% block inner %}
-	<center><h3>Recolecta</h3></center>
-    <form action="{% url 'home' %}" method="post">
-        {% csrf_token %}
-        {% bootstrap_form form %}
-        {% buttons %}
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        {% endbuttons %}
-    </form>
+    <div class="container text-center py-3">
+        <div class="card main-form-card">
+        	<center><h2 class="main-form-title">Recolecta</h2></center>
+            <form action="{% url 'home' %}" method="post">
+                {% csrf_token %}
+                {% bootstrap_form form layout='inline' %}
+                {% buttons %}
+                    <button type="submit" class="btn btn-success">Enviar</button>
+                {% endbuttons %}
+            </form>
+        </div>
+    </div>
 {% endblock inner %}
