@@ -25,4 +25,10 @@ class Home(BaseView):
         return self.render_template(request, context=context)
 
     def post(self, request):
+        form = ItemForm(request.POST)
+        if form.is_valid():
+            # process the data in form.cleaned_data as required
+            # redirect home with a success banner
+            # send email with item overview link (add small link to request cancellation)
+            return self.render_json({'success': True})
         return self.render_json({'success': False})
