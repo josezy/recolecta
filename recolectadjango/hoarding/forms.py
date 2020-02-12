@@ -1,29 +1,12 @@
 from django import forms
 
 from hoarding.models import Item
-
+from core.constants import WEEKDAYS, WORKING_TIMES
 
 AVAILABILITY = (
-    ('monday_morning', 'Lunes 6am - 12m'),
-    ('monday_afternoon', 'Lunes 12m - 6pm'),
-
-    ('tuesday_morning', 'Martes 6am - 12m'),
-    ('tuesday_afternoon', 'Martes 6am - 12m'),
-
-    # ('monday_morning', 'Lunes 6am - 12m'),
-    # ('monday_morning', 'Lunes 6am - 12m'),
-
-    # ('monday_morning', 'Lunes 6am - 12m'),
-    # ('monday_morning', 'Lunes 6am - 12m'),
-
-    # ('monday_morning', 'Lunes 6am - 12m'),
-    # ('monday_morning', 'Lunes 6am - 12m'),
-
-    # ('monday_morning', 'Lunes 6am - 12m'),
-    # ('monday_morning', 'Lunes 6am - 12m'),
-
-    # ('monday_morning', 'Lunes 6am - 12m'),
-    # ('monday_morning', 'Lunes 6am - 12m'),
+    (f"{day[0]}_{wt[0]}", f"{day[1]} {wt[1]}")
+    for day in WEEKDAYS for wt in WORKING_TIMES
+    if wt[0] != 'unavailable'
 )
 
 
