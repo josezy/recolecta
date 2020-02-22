@@ -43,11 +43,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'core',
-    'hoarding',
-
     'django_extensions',
     'bootstrap4',
+    'optimized_image',
+
+    'core',
+    'hoarding',
 ]
 
 MIDDLEWARE = [
@@ -132,3 +133,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(DATA_DIR, 'static')
+
+
+OPTIMIZED_IMAGE_METHOD = 'pillow'
+
+DEFAUL_RENT_IMAGE = 'no-image.png'
+DEFAUL_AVATAR = 'blank-profile-picture.png'
