@@ -20,3 +20,9 @@ WEEKDAYS = (
     ('saturday', 'Sábado'),
     ('sunday', 'Domingo'),
 )
+
+PICKUP_TIMES = tuple(
+    (f"{day[0]}_{wt[0]}", f"{day[1]} {wt[1]}")
+    for day in WEEKDAYS for wt in WORKING_TIMES
+    if wt[0] in ('morning', 'afternoon', 'night')
+)

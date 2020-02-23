@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'bootstrap4',
     'optimized_image',
+    'multiselectfield',
 
     'core',
     'hoarding',

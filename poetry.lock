@@ -117,6 +117,17 @@ six = ">=1.2"
 
 [[package]]
 category = "main"
+description = "Django multiple select field"
+name = "django-multiselectfield"
+optional = false
+python-versions = "*"
+version = "0.1.12"
+
+[package.dependencies]
+django = ">=1.4"
+
+[[package]]
+category = "main"
 description = "A simple Django app that allows for optimization of images."
 name = "django-optimized-image"
 optional = false
@@ -382,7 +393,7 @@ python-versions = "*"
 version = "0.1.8"
 
 [metadata]
-content-hash = "e5646335215f7a77d9f72b729033b82d0ed7c8eb63366eb20032a98707a103a2"
+content-hash = "789bab43040728024fe8007338b482e880c766bbc1d7c9224fb8b80b4c95e3b8"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -430,6 +441,10 @@ django-bootstrap4 = [
 django-extensions = [
     {file = "django-extensions-2.2.8.tar.gz", hash = "sha256:2699cc1d6fb4bd393c0b5832fea4bc685f2ace5800b3c9ff222b2080f161ac04"},
     {file = "django_extensions-2.2.8-py2.py3-none-any.whl", hash = "sha256:1a03c4e8bade575f8c2be6c76456f8a2be3f9b02ab9f47d3535afa9562dc0493"},
+]
+django-multiselectfield = [
+    {file = "django-multiselectfield-0.1.12.tar.gz", hash = "sha256:d0a4c71568fb2332c71478ffac9f8708e01314a35cf923dfd7a191343452f9f9"},
+    {file = "django_multiselectfield-0.1.12-py3-none-any.whl", hash = "sha256:c270faa7f80588214c55f2d68cbddb2add525c2aa830c216b8a198de914eb470"},
 ]
 django-optimized-image = [
     {file = "django-optimized-image-0.2.0.tar.gz", hash = "sha256:14686876682c1910707b23fd8738d7f1e13ab869bd598c792ddac26e062ba671"},

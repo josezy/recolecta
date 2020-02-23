@@ -1,15 +1,10 @@
 from django.contrib import admin
 
-from hoarding.models import Item, CollectionSchedule
+from hoarding.models import Item
 
 
 class ItemAdmin(admin.ModelAdmin):
     pass
 
 
-class CollectionScheduleAdmin(admin.ModelAdmin):
-    pass
-
-
 admin.site.register(Item, ItemAdmin)
-admin.site.register(CollectionSchedule, CollectionScheduleAdmin)
