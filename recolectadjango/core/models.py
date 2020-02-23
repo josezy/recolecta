@@ -4,6 +4,7 @@ from django.contrib.auth.models import AbstractUser
 
 from core.model_utils import BaseModel
 from core.constants import USER_TYPES
+from core.utils import avatar_path, validate_file_size
 
 
 class User(AbstractUser, BaseModel):
@@ -20,8 +21,8 @@ class User(AbstractUser, BaseModel):
 
     email = models.EmailField(unique=True)
     avatar = models.ImageField(
-        # upload_to=avatar_path,
-        # validators=[validate_file_size],
+        upload_to=avatar_path,
+        validators=[validate_file_size],
         blank=True, null=True
     )
     user_type = models.CharField(max_length=255, choices=USER_TYPES)
